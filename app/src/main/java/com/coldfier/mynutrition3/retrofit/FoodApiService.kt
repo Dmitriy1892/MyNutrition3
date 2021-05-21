@@ -1,6 +1,5 @@
 package com.coldfier.mynutrition3.retrofit
 
-import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -16,6 +15,6 @@ interface FoodApiService {
 
         @Query("app_key")
         appKey: String = "7167ea5c65592edf16445f0543cf9d56"
-    ): Hints
+    ): FoodResponse
 
 }
