@@ -1,5 +1,6 @@
 package com.coldfier.mynutrition3.retrofit
 
+import com.coldfier.mynutrition3.models.FoodResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 

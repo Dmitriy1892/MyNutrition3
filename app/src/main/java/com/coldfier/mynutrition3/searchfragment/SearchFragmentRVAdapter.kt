@@ -2,16 +2,14 @@ package com.coldfier.mynutrition3.searchfragment
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.coldfier.mynutrition3.R
 import com.coldfier.mynutrition3.databinding.ItemRecViewBinding
-import com.coldfier.mynutrition3.retrofit.Food
-import com.coldfier.mynutrition3.retrofit.Hint
+import com.coldfier.mynutrition3.models.Food
+import com.coldfier.mynutrition3.models.Hint
 
 class SearchFragmentRVAdapter: RecyclerView.Adapter<SearchFragmentRVAdapter.SearchFoodHolder>() {
 
-    var hints = listOf<Hint>()
+    var foodList = listOf<Food>()
         set(value) {
             field = value
             notifyDataSetChanged()
@@ -23,14 +21,12 @@ class SearchFragmentRVAdapter: RecyclerView.Adapter<SearchFragmentRVAdapter.Sear
     }
 
     override fun onBindViewHolder(holder: SearchFoodHolder, position: Int) {
-        val item = hints[position].food
-        if (item != null) {
-            holder.bind(item)
-        }
+        val item = foodList[position]
+        holder.bind(item)
     }
 
     override fun getItemCount(): Int {
-        return hints.size
+        return foodList.size
     }
 
     class SearchFoodHolder(private var binding: ItemRecViewBinding) : RecyclerView.ViewHolder(binding.root) {

@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.coldfier.mynutrition3.R
@@ -29,11 +28,8 @@ class SearchFragment : Fragment() {
         binding.resultsRecyclerView.adapter = rvAdapter
         binding.resultsRecyclerView.layoutManager = LinearLayoutManager(context)
 
-        viewModel.foodArray.observe(viewLifecycleOwner, {
-            it?.let {
-                rvAdapter.hints = it!!
-            }
-
+        viewModel.foodList.observe(viewLifecycleOwner, {
+                rvAdapter.foodList = it
         })
 
         binding.searchButton.setOnClickListener{

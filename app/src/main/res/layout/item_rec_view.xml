@@ -7,7 +7,7 @@
     <data>
         <variable
             name="food"
-            type="com.coldfier.mynutrition3.retrofit.Food" />
+            type="com.coldfier.mynutrition3.models.Food" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,7 +18,7 @@
             android:id="@+id/food_name_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="92dp"
+            android:layout_marginStart="44dp"
             android:text="@{food.label}"
             app:layout_constraintBottom_toBottomOf="@+id/image_view_container"
             app:layout_constraintStart_toEndOf="@+id/image_view_container"

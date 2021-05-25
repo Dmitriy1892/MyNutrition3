@@ -1,5 +1,7 @@
-package com.coldfier.mynutrition3.retrofit
+package com.coldfier.mynutrition3.models
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.squareup.moshi.Json
 
 //Main Json response
@@ -24,8 +26,10 @@ data class NextPage(
     val href: String?
 )
 
+@Entity(tableName = "cache_table")
 data class Food(
 
+    @PrimaryKey
     val foodId: String?,
 
     val label: String?,
