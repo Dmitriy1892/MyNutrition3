@@ -4,8 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.coldfier.mynutrition3.databinding.ItemRecViewBinding
-import com.coldfier.mynutrition3.models.Food
-import com.coldfier.mynutrition3.models.Hint
+import com.coldfier.mynutrition3.cacheroom.Food
 
 class SearchFragmentRVAdapter: RecyclerView.Adapter<SearchFragmentRVAdapter.SearchFoodHolder>() {
 

@@ -20,9 +20,9 @@ fun bindImage(imgView: ImageView, imgUrl: String?) {
 }
 
 @BindingAdapter("setCalories")
-fun bindCalories(textView: TextView, text: String?) {
+fun bindCalories(textView: TextView, text: Double?) {
     text?.let {
-        val correctValue = text.substring(0, (text.indexOf(".") + 2)) + " kcal"
+        val correctValue = text.toString().substring(0, (text.toString().indexOf(".") + 2)) + " kcal"
         textView.text = correctValue
     }
 }

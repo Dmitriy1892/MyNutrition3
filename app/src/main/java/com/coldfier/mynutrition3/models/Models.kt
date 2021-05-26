@@ -26,10 +26,8 @@ data class NextPage(
     val href: String?
 )
 
-@Entity(tableName = "cache_table")
 data class Food(
 
-    @PrimaryKey
     val foodId: String?,
 
     val label: String?,
